@@ -1,30 +1,29 @@
 Rails.application.routes.draw do
-
   devise_for :users
   get "dashboard/index"
-  
-  
+
+
   namespace :admin do
     get "/dashboard", to: "dashboard#index", as: :dashboard
   end
 
   resources :customers do
-    resources :contacts, only: [:new, :create, :edit, :update, :destroy]
+    resources :contacts, only: [ :new, :create, :edit, :update, :destroy ]
   end
 
   resources :users do
-    resources :contacts, only: [:index]
+    resources :contacts, only: [ :index ]
   end
 
   resources :leads do
     member do
-      post 'convert'  # to convert lead to opportunity
+      post "convert"  # to convert lead to opportunity
     end
   end
-  
+
   resources :opportunities
 
-  
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -40,5 +39,5 @@ Rails.application.routes.draw do
 
   get "/admin", to: "users#show"
 
-  resources :users, only: [:show, :edit, :update]
+  resources :users, only: [ :show, :edit, :update ]
 end

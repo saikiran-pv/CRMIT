@@ -1,5 +1,4 @@
 class UsersController < Users::BaseController
-  
   def show
     @user = current_user
   end
@@ -11,9 +10,9 @@ class UsersController < Users::BaseController
   def update
     @user = current_user
     if @user.update(user_params)
-      redirect_to user_path(@user), notice: 'Profile updated successfully!' 
+      redirect_to user_path(@user), notice: "Profile updated successfully!"
     else
-      render :edit 
+      render :edit
     end
   end
 
@@ -23,6 +22,4 @@ class UsersController < Users::BaseController
   def user_params
     params.require(:user).permit(:email, :first_name, :last_name)
   end
-
-
 end

@@ -6,5 +6,4 @@ class User < ApplicationRecord
   has_and_belongs_to_many :customers
   has_and_belongs_to_many :contacts
   has_many :leads, foreign_key: "assigned_to", class_name: "Lead"
-
 end
