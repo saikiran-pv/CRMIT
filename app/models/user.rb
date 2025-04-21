@@ -3,4 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  has_and_belongs_to_many :customers
+  has_and_belongs_to_many :contacts
+  has_many :leads, foreign_key: "assigned_to", class_name: "Lead"
+
 end
