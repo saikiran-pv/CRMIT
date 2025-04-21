@@ -1,0 +1,15 @@
+<h1>Welcome to your Dashboard, <%= current_user.first_name %>!</h1>
+
+<div class="dashboard-stats">
+  <!-- Display user stats, like number of open leads, customers, etc. -->
+  <p>Total Customers: <%= @customer_count %></p>
+  <p>Total Contacts: <%= @contact_count %></p>
+</div>
+
+<div class="quick-actions">
+  <h3>Quick Actions</h3>
+  <ul>
+    <li><%= link_to "Manage Customers", customers_path %></li>
+    <li><%= link_to "Manage Contacts", user_contacts_path(current_user) %></li>
+  </ul>
+</div>

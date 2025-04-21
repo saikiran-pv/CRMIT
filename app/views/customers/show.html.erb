@@ -1,0 +1,66 @@
+<h1>Customer Details</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @customer.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @customer.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @customer.phone %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @customer.address %>
+</p>
+
+<hr>
+
+<h2>Contacts</h2>
+
+<% if @customer.contacts.any? %>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Position</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @customer.contacts.each do |contact| %>
+        <tr>
+          <td><%= contact.first_name %></td>
+          <td><%= contact.last_name %></td>
+          <td><%= contact.email %></td>
+          <td>
+            <%= link_to 'Edit', edit_customer_contact_path(@customer, contact) %> |
+            <%= button_to 'Delete', customer_contact_path(@customer, contact), method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>No contacts found for this customer.</p>
+<% end %>
+
+<p>
+  <%= link_to 'Add Contact', new_customer_contact_path(@customer) %>
+</p>
+
+<hr>
+
+<p>
+  <%= link_to 'Edit Customer', edit_customer_path(@customer) %> |
+  <%= link_to 'Delete Customer', customer_path(@customer), method: :delete, data: { confirm: 'Are you sure?' } %> |
+  <%= link_to 'Back to Customers', customers_path %>
+</p>
