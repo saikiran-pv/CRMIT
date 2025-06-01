@@ -1,24 +1,76 @@
-# README
+# 🌟 CRM Web Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A full-featured, customizable Customer Relationship Management (CRM) system built with Ruby on Rails and MySQL, designed to help businesses manage customers, leads, contacts, and sales opportunities efficiently.
 
-Things you may want to cover:
+## 🚀 Features
 
-* Ruby version
+- 🧑‍🤝‍🧑 Customer & Contact Management
+- 📋 Lead and Opportunity Tracking
+- 📈 Sales Pipeline Visualization
+- 🗂️ Activity Logging & Notes
+- 🔍 Advanced Search & Filtering
+- ✅ Role-Based Access Control (Admin/User)
+- 📊 Dashboard with Key Metrics
+- 📬 Email Integration (optional)
+- 🔁 Import/Export Data (CSV)
+- 💾 Data Security & Audit Trails (PaperTrail)
+- 🔄 Real-time UI updates (Hotwire/Turbo)
 
-* System dependencies
+## 🛠 Tech Stack
 
-* Configuration
+- **Backend:** Ruby on Rails 7
+- **Database:** MySQL
+- **Frontend:** ERB + SCSS (or Tailwind CSS)
+- **Authentication:** Devise
+- **Authorization:** Pundit
+- **Background Jobs:** Sidekiq + Redis
+- **Search:** Sunspot (Solr)
+- **Versioning:** PaperTrail
+- **Other:** RSpec, FactoryBot, Pry
 
-* Database creation
+## 🔧 Setup Instructions
 
-* Database initialization
+1. **Clone the repository:**
 
-* How to run the test suite
+   ```bash
+   git clone https://github.com/yourusername/crm-app.git
+   cd crm-app
 
-* Services (job queues, cache servers, search engines, etc.)
+2. **Install dependencies:**
 
-* Deployment instructions
+   ```bash
+   bundle install
+   yarn install
+   ```
 
-* ...
+3. **Configure database:**
+
+   Update `config/database.yml` with your MySQL credentials.
+
+   ```bash
+   rails db:create db:migrate db:seed
+   ```
+
+4. **Start the server:**
+
+   ```bash
+   rails server
+   ```
+
+5. **Visit the app:**
+
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 🧪 Running Tests
+
+```bash
+bundle exec rspec
+```
+
+## 📄 License
+
+This project is open source under the [MIT License](LICENSE).
+
+## 🙌 Acknowledgments
+
+Built with ❤️ by Saikiran. Inspired by modern CRMs and designed to be adaptable across industries.
