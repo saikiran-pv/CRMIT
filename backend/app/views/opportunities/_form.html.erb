@@ -1,0 +1,60 @@
+<%= form_with(model: opportunity, local: true) do |form| %>
+  <% if opportunity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(opportunity.errors.count, "error") %> prohibited this opportunity from being saved:</h2>
+
+      <ul>
+        <% opportunity.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :amount %><br>
+    <%= form.text_field :amount %>
+  </div>
+  
+  <div>
+    <%= form.label :stage %><br>
+    <%= form.text_field :stage %>
+  </div>
+
+  <div>
+    <%= form.label :status %><br>
+    <%= form.text_area :status %>
+  </div>
+
+  <div>
+      <%= form.label :close_date %><br>
+      <%= form.date_field :close_date %>
+  </div>
+
+  <div>
+      <%= form.label :notes %><br>
+      <%= form.text_area :notes %>
+  </div>
+
+  <div>
+      <%= form.label :customer_id %><br>
+      <%= form.text_area :customer_id %>
+  </div>
+
+  <div>
+      <%= form.label :lead_id %><br>
+      <%= form.text_area :lead_id %>
+  </div>
+
+
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+  

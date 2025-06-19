@@ -1,0 +1,18 @@
+# React
+frontend/node_modules/
+frontend/build/
+frontend/.env
+
+# Rails
+backend/log/
+backend/tmp/
+backend/.env
+backend/.bundle
+backend/db/*.sqlite3
+backend/db/*.sqlite3-journal
+backend/public/assets
+backend/public/packs
+
+# System
+.DS_Store
+*.swp

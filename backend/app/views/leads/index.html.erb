@@ -1,0 +1,36 @@
+<h2>My Leads</h2>
+<%= link_to 'Create', new_lead_path %>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Status</th>
+      <th>Source</th>
+      <th>Notes</th>
+      <th>Assigned To</th>
+      <th>Created At</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @leads.each do |lead| %>
+      <tr>
+        <td><%= lead.name %></td>
+        <td><%= lead.email %></td>
+        <td><%= lead.phone %></td>
+        <td><%= lead.status %></td>
+        <td><%= lead.source %></td>
+        <td><%= lead.notes %></td>
+        <td><%= lead.assigned_user&.email || "Unassigned" %></td>
+        <td><%= lead.created_at.strftime("%b %d, %Y") %></td>
+        <td>
+          <%= link_to 'Show', lead_path(lead) %> |
+          <%= link_to 'Edit', edit_lead_path(lead) %> |
+          <%= button_to 'Delete', lead_path(lead), method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

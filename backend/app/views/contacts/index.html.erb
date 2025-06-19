@@ -1,0 +1,8 @@
+<!-- app/views/contacts/index.html.erb -->
+<h1>Contacts for <%= @user.first_name %></h1>
+
+<ul>
+  <% @contacts.each do |contact| %>
+    <li><%= contact.first_name %> - <%= contact.email %></li>
+  <% end %>
+</ul>

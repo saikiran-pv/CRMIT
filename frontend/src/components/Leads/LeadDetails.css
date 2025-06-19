@@ -1,0 +1,27 @@
+.lead-details {
+  padding: 1.5rem;
+  margin: 1rem auto;
+  max-width: 600px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  font-family: Arial, sans-serif;
+}
+
+.lead-details p {
+  margin: 0.5rem 0;
+  line-height: 1.4;
+}
+
+.lead-name {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.lead-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}

@@ -1,0 +1,20 @@
+.lead-details-table {
+  width: 100%;
+  max-width: 500px;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.lead-details-table th,
+.lead-details-table td {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+}
+
+.lead-details-table th {
+  background-color: #f2f2f2;
+  width: 150px;
+  font-weight: 600;
+}
+

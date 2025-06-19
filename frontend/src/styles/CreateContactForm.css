@@ -1,0 +1,22 @@
+.create-contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.create-contact-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.create-contact-form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+.readonly-input {
+  background-color: #f0f0f0; /* light gray or any color you want */
+  color: #555;               /* darker text color */
+  cursor: default;           /* normal arrow cursor */
+}

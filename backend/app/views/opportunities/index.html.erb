@@ -1,0 +1,34 @@
+<h2>My Leads</h2>
+<%= link_to 'Create', new_opportunity_path %>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Amount</th>
+      <th>Stage</th>
+      <th>Close Date</th>
+      <th>Notes</th>
+      <th>Assigned To</th>
+      <th>Created At</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @opportunities.each do |opportunity| %>
+      <tr>
+        <td><%= opportunity.title %></td>
+        <td><%= opportunity.amount %></td>
+        <td><%= opportunity.stage %></td>
+        <td><%= opportunity.close_date %></td>
+        <td><%= opportunity.notes %></td>
+        <td><%= opportunity.assigned_user&.email || "Unassigned" %></td>
+        <td><%= opportunity.created_at.strftime("%b %d, %Y") %></td>
+        <td>
+          <%= link_to 'Show', opportunity_path(opportunity) %> |
+          <%= link_to 'Edit', edit_opportunity_path(opportunity) %> |
+          <%= button_to 'Delete', opportunity_path(opportunity), method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
