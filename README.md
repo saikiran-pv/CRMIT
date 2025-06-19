@@ -27,22 +27,13 @@ It supports user authentication, lead tracking, activity logging, and more.
 
 ## 📂 Folder Structure
 
+```bash
+
 CRM/
 ├── frontend/ → React SPA (UI, routing, views)
 ├── backend/ → Rails API (models, controllers, db)
-├── docs/ → Architecture, diagrams, wireframes
 └── README.md
-
-
-
-
----
-
-## 🎨 UI/UX Design
-
-![UI Dashboard](./docs/ui-dashboard.png)
-
-> 🔗 [View Figma Prototype](https://www.figma.com/file/your-figma-design)
+```
 
 ---
 
@@ -64,23 +55,24 @@ Clone the repository:
 ```bash
 git clone https://github.com/saikiran-pv/CRMIT.git
 cd CRMIT
-
+```
 
 Backend Setup (Rails)
 
-
+```bash
 cd backend
 bundle install
 rails db:create db:migrate db:seed
 rails s
-
+```
 
 Frontend Setup (React)
 
+```bash
 cd frontend
 npm install
 npm run dev
-
+```
 
 By default:
 
@@ -105,4 +97,4 @@ Saikiranreddy Peddavootla
 
     GitHub: @saikiran-pv
 
-    LinkedIn: your-linkedin
+    LinkedIn: https://www.linkedin.com/in/saikiran-reddy-peddavootla-892049164/
